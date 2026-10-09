@@ -1,0 +1,289 @@
+/* Mora Gili — Section 1 (Hero)
+   Brand colors sampled from assets/moragili-logo.png (median of opaque logo pixels):
+   green  #42B41A  ("The Mora")
+   purple #B90997  ("Gili" figure + tagline)
+   Darker/lighter tints below are derived from those two values. */
+
+:root {
+  --brand-purple: #B90997;
+  --brand-purple-dark: #94077A;   /* derived: hover / pressed */
+  --brand-purple-tint: #FBEFF8;   /* derived: soft surfaces */
+  --brand-green: #42B41A;
+  --brand-green-dark: #2F8212;    /* derived: green used as text (contrast on white) */
+  --brand-green-tint: #EEF8EA;
+  --white: #FFFFFF;
+  --ink: #1D1A24;
+  --ink-soft: #55505E;
+  --line: #ECE7EF;
+
+  --font: "Rubik", "Assistant", "Heebo", "Arial Hebrew", "Segoe UI", Arial, sans-serif;
+  --radius-lg: 28px;
+  --container: 1320px;
+  --gutter: 48px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Header (logo only) ---------- */
+.site-header {
+  position: relative;
+  z-index: 2;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+.site-header__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 14px var(--gutter);
+  display: flex;
+  align-items: center;
+}
+.site-header__logo {
+  height: 58px;
+  width: auto;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 56px 0 104px;
+  background: var(--white);
+}
+
+.hero__deco {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.hero__content { position: relative; }
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 22px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: var(--brand-purple-tint);
+  color: var(--brand-purple);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.hero__eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-green);
+  flex: none;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: clamp(2.4rem, 4.7vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.hero__title-line { display: block; }
+.hero__title-line--accent { color: var(--brand-purple); }
+
+.hero__subtitle {
+  margin: 24px 0 0;
+  max-width: 32ch;
+  font-size: clamp(1.125rem, 1.55vw, 1.375rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 28px;
+  border-radius: 16px;
+  font-family: inherit;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.btn:focus-visible {
+  outline: 3px solid var(--brand-green);
+  outline-offset: 3px;
+}
+.btn--primary {
+  background: var(--brand-purple);
+  color: var(--white);
+  box-shadow: 0 10px 24px -10px rgba(185, 9, 151, .55);
+}
+.btn--primary:hover { background: var(--brand-purple-dark); transform: translateY(-1px); }
+.btn--secondary {
+  background: var(--white);
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+}
+.btn--secondary:hover { border-color: var(--brand-purple); color: var(--brand-purple); }
+
+/* Trust figures — «14+ שנות ניסיון | 400+ תלמידים בשנה | 4 ערים» */
+.trust {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 44px 0 0;
+  padding: 0;
+}
+.trust__item {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 26px;
+  border-inline-start: 1px solid var(--line);
+}
+.trust__item:first-child { padding-inline-start: 0; border-inline-start: 0; }
+.trust__num {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--brand-green-dark);
+}
+.trust__label {
+  font-size: .9375rem;
+  color: var(--ink-soft);
+}
+
+/* Image — shown whole (never cropped), so faces and Mora Gili books stay visible */
+.hero__media {
+  position: relative;
+  margin: 0;
+}
+.hero__media-backdrop {
+  position: absolute;
+  inset: 22px -18px -18px 22px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--brand-green-tint), var(--brand-purple-tint));
+  z-index: 0;
+}
+.hero__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px -30px rgba(29, 26, 36, .35);
+}
+
+/* ---------- Open-question markers («לאישור») ----------
+   Hide all: <body class="hide-open">. Outline + absolutely-positioned label → no layout shift. */
+.open-q {
+  position: relative;
+  outline: 2px dashed #E0A100;
+  outline-offset: 6px;
+  border-radius: 6px;
+}
+.open-q::after {
+  content: "לאישור #" attr(data-q);
+  position: absolute;
+  top: -17px;
+  inset-inline-end: -10px;
+  z-index: 5;
+  padding: 1px 7px;
+  border: 1px solid #E0A100;
+  border-radius: 999px;
+  background: #FFF4D6;
+  color: #6B4800;
+  font: 600 11px/1.5 var(--font);
+  letter-spacing: 0;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.open-q--logo, .site-header__logo-wrap { display: inline-block; }
+.open-q--logo::after { top: 50%; inset-inline-end: auto; right: calc(100% + 12px); transform: translateY(-50%); }
+.trust .open-q::after { top: -24px; inset-inline-end: auto; inset-inline-start: -6px; }
+.trust__num--placeholder { color: #8A6200; background: #FFF4D6; border-radius: 6px; padding: 0 4px; outline-offset: 2px; }
+
+body.hide-open .open-q { outline: none; }
+body.hide-open .open-q::after { display: none; }
+body.hide-open .trust__num--placeholder { color: var(--brand-green-dark); background: none; padding: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .hero__inner { gap: 40px; }
+  .trust__item { padding-inline: 18px; }
+}
+
+@media (max-width: 900px) {
+  :root { --gutter: 20px; }
+  .site-header__inner { padding-block: 10px; }
+  .site-header__logo { height: 44px; }
+
+  .hero { padding: 28px 0 72px; }
+  /* Mobile order: eyebrow → headline → subtitle → image → buttons → trust,
+     so image + headline + buttons are all in the first screen. */
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .hero__content { display: contents; }
+  .hero__eyebrow { order: 1; align-self: flex-start; margin-bottom: 18px; }
+  .hero__title { order: 2; }
+  .hero__subtitle { order: 3; margin-top: 14px; max-width: none; }
+  .hero__media { order: 4; margin-top: 28px; }
+  .hero__actions { order: 5; margin-top: 36px; }
+  .trust { order: 6; }
+  .hero__actions .btn { flex: 1 1 100%; }
+  .trust { margin-top: 32px; }
+  .hero__media-backdrop { inset: 12px -8px -10px 10px; }
+  .hero__img { border-radius: 20px; }
+}
+
+@media (max-width: 420px) {
+  .hero__eyebrow { font-size: .9375rem; }
+  .trust__item { padding-inline: 14px; }
+  .trust__num { font-size: 1.4rem; }
+  .trust__label { font-size: .875rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn--primary:hover { transform: none; }
+}

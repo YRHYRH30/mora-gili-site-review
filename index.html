@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mora Gili — אנגלית שילדים אוהבים ללמוד</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<!-- Open-question markers («לאישור»): to hide them all, change the next line to <body class="hide-open"> -->
+<body>
+
+  <!-- Minimal header: logo only (as on the original site). No nav — nav items are not part of the section-1 brief. -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <span class="site-header__logo-wrap">
+        <img class="site-header__logo" src="assets/moragili-logo.png" width="2028" height="686"
+             alt="The Mora Gili — רשת חוגי אנגלית לילדים">
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1 — HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+
+      <!-- Subtle decorations: clouds, birds, letters, stars, wavy lines (spec: «בעדינות») -->
+      <svg class="hero__deco" aria-hidden="true" focusable="false" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#B90997" stop-opacity=".10"/>
+            <stop offset="1" stop-color="#B90997" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="glowGreen" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#42B41A" stop-opacity=".10"/>
+            <stop offset="1" stop-color="#42B41A" stop-opacity="0"/>
+          </radialGradient>
+          <path id="cloud" d="M20 44a18 18 0 0 1 4-35 24 24 0 0 1 44-4 17 17 0 0 1 26 13 14 14 0 0 1-2 26z"/>
+          <path id="star" d="M0-10 2.6-3.2 10-3 4.2 1.6 6.2 9 0 4.8-6.2 9-4.2 1.6-10-3-2.6-3.2z"/>
+          <path id="bird" d="M0 0q7-7 14 0q7-7 14 0" fill="none" stroke-width="2.2" stroke-linecap="round"/>
+        </defs>
+
+        <!-- soft brand glows (echo of the original site's blurred circles) -->
+        <circle cx="1310" cy="140" r="260" fill="url(#glowGreen)"/>
+        <circle cx="170" cy="620" r="300" fill="url(#glowPurple)"/>
+        <circle cx="560" cy="60" r="200" fill="url(#glowPurple)"/>
+
+        <!-- clouds -->
+        <use href="#cloud" x="70" y="70" fill="#B90997" opacity=".06"/>
+        <use href="#cloud" x="610" y="70" fill="#42B41A" opacity=".07" transform="scale(.8)" transform-origin="660 93"/>
+        <use href="#cloud" x="1330" y="660" fill="#B90997" opacity=".05"/>
+
+        <!-- birds -->
+        <g stroke="#B90997" opacity=".28">
+          <use href="#bird" x="300" y="70"/>
+          <use href="#bird" x="340" y="52" transform="scale(.7)" transform-origin="354 52"/>
+        </g>
+        <g stroke="#42B41A" opacity=".32">
+          <use href="#bird" x="1060" y="40" transform="scale(.8)" transform-origin="1074 40"/>
+        </g>
+
+        <!-- stars -->
+        <use href="#star" x="760" y="70" fill="#42B41A" opacity=".35"/>
+        <use href="#star" x="40" y="330" fill="#B90997" opacity=".25" transform="scale(.8)" transform-origin="40 330"/>
+        <use href="#star" x="1400" y="420" fill="#42B41A" opacity=".3" transform="scale(.7)" transform-origin="1400 420"/>
+        <use href="#star" x="900" y="700" fill="#B90997" opacity=".22" transform="scale(.6)" transform-origin="900 700"/>
+
+        <!-- letters -->
+        <g font-family="Rubik, Arial, sans-serif" font-weight="700">
+          <text x="210" y="160" font-size="34" fill="#42B41A" opacity=".16" transform="rotate(-12 210 160)">A</text>
+          <text x="1380" y="300" font-size="30" fill="#B90997" opacity=".14" transform="rotate(10 1380 300)">b</text>
+          <text x="48" y="520" font-size="28" fill="#42B41A" opacity=".14" transform="rotate(8 48 520)">C</text>
+          <text x="1020" y="735" font-size="26" fill="#B90997" opacity=".12" transform="rotate(-8 1020 735)">g</text>
+        </g>
+
+        <!-- wavy lines -->
+        <path d="M-20 712c80-26 160 26 240 0s160-26 240 0 160 26 240 0 160-26 240 0 160 26 240 0 160-26 240 0" fill="none" stroke="#42B41A" stroke-width="2" opacity=".18"/>
+        <path d="M-20 732c80-22 160 22 240 0s160-22 240 0 160 22 240 0 160-22 240 0 160 22 240 0 160-22 240 0" fill="none" stroke="#B90997" stroke-width="1.5" opacity=".12"/>
+        <path d="M800 140c18-10 36 10 54 0s36-10 54 0 36 10 54 0" fill="none" stroke="#B90997" stroke-width="2" opacity=".2" stroke-linecap="round"/>
+      </svg>
+
+      <div class="hero__inner">
+
+        <div class="hero__content">
+          <p class="hero__eyebrow open-q" data-q="2"><span class="hero__eyebrow-dot" aria-hidden="true"></span>בית ספר לאנגלית לילדים</p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__title-line">אנגלית שילדים</span>
+            <span class="hero__title-line hero__title-line--accent">אוהבים ללמוד.</span>
+          </h1>
+
+          <p class="hero__subtitle">בית ספר לאנגלית המשלב קריאה, דיבור, חוויה ושיטה מוכחת.</p>
+
+          <div class="hero__actions open-q" data-q="5">
+            <a class="btn btn--primary" href="#">לקביעת שיעור ניסיון</a>
+            <a class="btn btn--secondary" href="#">הכירו את שיטת הלימוד</a>
+          </div>
+
+          <ul class="trust open-q" data-q="4" aria-label="נתוני אמון">
+            <li class="trust__item">
+              <strong class="trust__num trust__num--placeholder open-q" data-q="1"><span dir="ltr">[14+ / 12+]</span></strong>
+              <span class="trust__label">שנות ניסיון</span>
+            </li>
+            <li class="trust__item">
+              <strong class="trust__num"><span dir="ltr">400+</span></strong>
+              <span class="trust__label">תלמידים בשנה</span>
+            </li>
+            <li class="trust__item">
+              <strong class="trust__num">4</strong>
+              <span class="trust__label">ערים</span>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="hero__media">
+          <span class="hero__media-backdrop" aria-hidden="true"></span>
+          <img class="hero__img" src="assets/hero-three-kids.jpg" width="1672" height="941"
+               alt="שלושה ילדים יושבים סביב שולחן בכיתה מוארת: ילד בסווטשירט ירוק נשען על ידו ומחייך למצלמה, ושתי ילדות קוראות יחד בספרי Mora Gili. על השולחן ספרי לימוד, כרטיסיות מילים באנגלית ועפרונות צבעוניים.">
+        </figure>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
